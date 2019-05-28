@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NotificationEngines
 {
-    struct User
+    public struct User
     {
         public int ID;
         public string Name;

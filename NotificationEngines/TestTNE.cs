@@ -12,31 +12,17 @@ namespace NotificationEngines
         {
             this.lastRunAt = 0;
             this.msBetweenRuns = 10000;
-            this.Message = "My name is {0}";
+            this.Message = "My name is {0} and I was born in {1}";
         }
 
         protected override string[] GetData(User user)
         {
-            return new string[] { user.Name };
+            return new string[] { user.Name, user.DOB.Year.ToString() };
         }
 
         protected override User[] GetUsers()
         {
-            return new User[]
-            {
-                new User {
-                    Name = "Skrillex",
-                    DOB = new DateTime(1996, 09, 18),
-                    ID = 0,
-                    AllowMsgBox = false
-                },
-                new User {
-                    Name = "Jeff",
-                    DOB = new DateTime(1986, 10, 18),
-                    ID = 1,
-                    AllowMsgBox = false
-                }
-            };
+            return Data.Users.Where((user) => user.DOB.Year <= 2000).ToArray();
         }
     }
 }
