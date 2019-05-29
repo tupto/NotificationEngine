@@ -13,6 +13,7 @@ namespace NotificationEngines
         public NotificationType NotificationType
         {
             get { return this._notificationType; }
+            protected set { _notificationType = value; }
         }
 
         string _message;

@@ -9,7 +9,7 @@ namespace NotificationEngines
 {
     class NotificationManager
     {
-        List<object> engines;
+        List<NotificationEngine> engines;
         long fullTime;
         
         public void Run()
@@ -29,10 +29,10 @@ namespace NotificationEngines
             }
         }
 
-        public void Register(object engine)
+        public void Register(NotificationEngine engine)
         {
             if (engines == null)
-                engines = new List<object>();
+                engines = new List<NotificationEngine>();
             
             engines.Add(engine);
         }

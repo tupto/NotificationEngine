@@ -14,7 +14,7 @@ namespace NotificationEngines
                 Name = "Skrillex",
                 DOB = new DateTime(1996, 09, 18),
                 ID = 0,
-                AllowMsgBox = false
+                AllowMsgBox = true
             },
             new User {
                 Name = "Jeff",

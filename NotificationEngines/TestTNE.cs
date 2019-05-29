@@ -13,6 +13,7 @@ namespace NotificationEngines
             this.lastRunAt = 0;
             this.msBetweenRuns = 10000;
             this.Message = "My name is {0} and I was born in {1}";
+            this.NotificationType = NotificationType.Either;
         }
 
         protected override string[] GetData(User user)
